@@ -1,0 +1,24 @@
+name: Jobs
+
+on:  
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  JobLinux:  
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: actions/checkout@v4
+      - name: Realizando leitura arquivo README.md e Verificando a versão do Kernel.
+        run: |
+          echo Lendo README
+          cat README.md
+          echo Versão Kernel
+          uname -a
+  JobWindows:          
+    runs-on: windows-lates
+    steps:
+      - uses: actions/checkout@v4
+      - name: Realizando  verificação a versão Windows.
+        run: Get-CimInstance Win32_OperatingSystem
+          
