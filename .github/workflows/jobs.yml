@@ -16,9 +16,9 @@ jobs:
           echo Versão Kernel
           uname -a
   JobWindows:          
-    runs-on: windows-lates
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Realizando  verificação a versão Windows.
-        run: Get-CimInstance Win32_OperatingSystem
+      - name: Realizando verificação a versão Windows.
+        run: "Get-CimInstance Win32_OperatingSystem"
           
